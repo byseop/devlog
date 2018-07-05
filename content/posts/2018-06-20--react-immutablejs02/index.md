@@ -10,7 +10,7 @@ category: "React"
   
 <br>
 
-이 포스트는 이어지는 튜토리얼입니다! [1편](https://byseop.github.io/2018/06/20/react-immutablejs01.html) 을 먼저 확인해주세요!
+이 포스트는 이어지는 튜토리얼입니다! [1편](https://byseop.netlify.com/react-immutablejs01/) 을 먼저 확인해주세요!
 
 <br>
 <br>

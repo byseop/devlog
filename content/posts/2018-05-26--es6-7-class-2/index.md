@@ -1,5 +1,5 @@
 ---
-title: ECMAScript 6 - 7. Class
+title: ECMAScript 6 - 7. Class -2-
 subTitle: ES6 - 클래스
 cover: es6.jpg
 category: "Javascript"

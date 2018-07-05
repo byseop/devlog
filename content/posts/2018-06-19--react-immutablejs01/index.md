@@ -5,6 +5,8 @@ cover: react.png
 category: "React"
 ---
 
+
+
 React에서 무엇보다 중요한 불변성(Immutability) 은 왜, 무엇일까?  
 이 포스트에서는 React에서의 불변성을 지키며 상태를 관리하는 이유를 알아본다.
 
