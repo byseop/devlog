@@ -29,7 +29,7 @@ var Person = (function () {
 ~~~
 위 예제를 프로토타입 관점에서 표현해 보면 아래와 같다.  
 
-![prototype](.\es6-prototype.png)
+![prototype](./es6-prototype.png)
   
 하지만 클래스 기반 언어에 익숙한 프로그래머들은 프로토타입 기반 프로그래밍 방식이 혼란스러울 수 있으며 자바스크립트를 어렵게 느끼게하는 하나의 장벽처럼 인식된다.  
   
@@ -311,7 +311,7 @@ console.log(Foo.prototype.constructor === Foo); // true
   
 지금까지의 내용을 프로토타입 체인 관점에서 표현하면 아래와 같다.  
   
-![static](.\es6-static.png)
+![static](./es6-static.png)
   
 <br>
 <br>
@@ -395,7 +395,7 @@ console.log(cylinder instanceof Circle); //true
 ~~~
 위 코드를 프로토타입 관점으로 표현하면 아래와 같다. 인스턴스 cylinder는 프로토타입 체인에 의해 부모클래스 Circle의 메소드를 사용할 수 있다.  
   
-![inherite](.\es6-inherite.png)
+![inherite](./es6-inherite.png)
   
 프로토타입 체인은 특정 객체의 프로퍼티나 메소드에 접근하려고 할 때 프로퍼티 또는 메소드가 없다면 [[Prototype]] 프로퍼티가 가르키는 링크를 따라 자신의 부모 역할을 하는 프로토타입 객체의 프로퍼티나 메소드를 차례대로 검색한다. 그리고 검색에 성공하면 그 프로퍼티나 메소드를 사용한다.  
 
@@ -465,7 +465,7 @@ console.log(Child.prototype.__proto__ === Parent.prototype); // true
 ~~~
 자식 클래스 Child의 프로토타입 객체는 부모 클래스 Parent이다. 그림으로 표현해보면 아래와 같다.  
   
-![chain](.\es6-chain.png)
+![chain](./es6-chain.png)
   
 이것은 Prototype chain에 의해 부모 클래스의 정적 메소드도 상속됨을 의미한다.
 ~~~javascript
@@ -505,7 +505,7 @@ console.log(Child.staticMethod());  // 'Hello wolrd'
 console.log(new Child().prototypeMethod()); 
 // TypeError: (intermediate value).staticMethod is not a function
 ~~~
-![prototype-c](.\es6-prototype-c.png)
+![prototype-c](./es6-prototype-c.png)
 
 <br>
 <br>

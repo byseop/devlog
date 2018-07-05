@@ -24,13 +24,13 @@ category: "Javascript"
   
 동기식 처리모델(Synchronous processing model)은 직렬적으로 태스크(task)를 수행한다. 즉 태스크는 순차적으로 실행되며 어떤 작업이 수행중이면 다음 태스크는 대기하게 된다. 예를 들어 서버에서 데이터를 가져와서 화면에 표시하는 태스크를 수행할 때, 서버에서 데이터를 요청하고 데이터가 응답될 때까지 이후의 태스크들은 블로킹된다.  
   
-![promise01](.\promise01.png)
+![promise01](./promise01.png)
 
 <br>
 
 비동기식 처리모델(Asynchronous processing model 또는 Non-Blocking processing model)은 병렬적으로 태스크를 수행한다. 즉, 태스크가 종료되지 않은 상태라 하더라도 대기하지 않고 즉시 다음 태스크를 실행한다. 예를 들어 서버에서 데이터를 가져와서 화면에 표시하는 태스크를 수행할 때, 서버에서 데이터를 요청한 이후 서버로부터 데이터가 응답될 때까지 대기하지 않고(Non-Blocking) 즉시 다음 태스크를 수행한다. 이후 서버로부터 데이터가 응답되면 이벤트가 발생하고 이벤트 핸들러가 데이터를 가지고 수행할 태스크를 계속해 수행한다. 자바스크립트의 대부분의 DOM 이벤트와 Timer함수(setTimeout, setInterval), Ajax 요청은 비동기식 처리 모델로 동작한다.  
   
-![promise02](.\promise02.png)
+![promise02](./promise02.png)
 
 <br>
 
@@ -51,7 +51,7 @@ step1(function(value1) {
 });
 ~~~  
   
-![promise03](.\promise03.png)
+![promise03](./promise03.png)
 
 <br>
 
@@ -155,7 +155,7 @@ const promise = new Promise((resolve, rejcet) => {
 ~~~
 Promise는 비동기 처리가 성공(fulfilled) 하였는지 또는 실패(rejected) 하였는지 등의 상태(state) 정보를 갖는다.  
   
-![promise04](.\promise04.png)
+![promise04](./promise04.png)
 
 <br>
 

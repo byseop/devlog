@@ -82,7 +82,7 @@ console.log(obj[mySymbol]); // 123
   
 Symbol() 함수로 Symbol 값을 생성할 수 있었다. 이것은 Symbol이 함수 객체라는 의미이다. 브라우저 콘솔에서 Symbol을 참조하여 보자.  
   
-![symbol01](.\symbol01.png)
+![symbol01](./symbol01.png)
 
 <br>
 
