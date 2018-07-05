@@ -1,9 +1,9 @@
 const colors = require("../../src/styles/colors");
 
 module.exports = {
-  siteTitle: "PersonalBlog - a blog starter for GatsbyJS", // <title>
-  shortSiteTitle: "PersonalBlog GatsbyJS Starter", // <title> ending for posts and pages
-  siteDescription: "PersonalBlog is a GatsbyJS starter.",
+  siteTitle: "BYSEOP's devlog", // <title>
+  shortSiteTitle: "BYSEOP's devlog", // <title> ending for posts and pages
+  siteDescription: "BYSEOP's devlog",
   siteUrl: "https://byseop.netlify.com/",
   pathPrefix: "",
   siteImage: "preview.jpg",
@@ -15,8 +15,8 @@ module.exports = {
   infoTitle: "byseop",
   infoTitleNote: "personal & develop blog",
   // manifest.json
-  manifestName: "PersonalBlog - a blog starter for GatsbyJS",
-  manifestShortName: "PersonalBlog", // max 12 characters
+  manifestName: "BYSEOP's devlog",
+  manifestShortName: "BYSEOP", // max 12 characters
   manifestStartUrl: "/",
   manifestBackgroundColor: colors.background,
   manifestThemeColor: colors.background,
