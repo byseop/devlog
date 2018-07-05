@@ -1,99 +1,211 @@
 ---
 title: ECMAScript 6 - 7. Class -2-
-subTitle: ES6 - 클래스 정적메소드
+subTitle: ES6 - 클래스
 cover: es6.jpg
 category: "Javascript"
 ---
 
-이 포스팅은 내용이 많아 1, 2, 3편으로 나뉘어 져 있습니다.  
+이 포스팅은 내용이 많아 1, 2편으로 나뉘어 져 있습니다.  
+전편을 보시려면 [이 곳](https://byseop.netlify.com/es6-7-class-1/)으로 이동하세요!  
   
 
 자바스크립트는 프로토타입 기반(prototype-based) 객체지향 언어다. 비록 다른 객체지향 언어들과의 차이점에 대한 논쟁이 있긴 하지만, 자바스크립트는 강력한 객체지향 프로그래밍 능력을 지니고 있다.  
 프로토타입 기반 프로그래밍은 클래스가 필요없는 (class-free) 객체지향 프로그래밍 스타일로 프로토타입 체인과 클로저 등으로 객체지향 언어의 상속, 캡슐화(정보 은닉) 등의 개념을 구현할 수 있다.  
   
 
-
-## 7. 정적 메소드  
+## 8. 클래스 상속  
   
-클래스의 정적(static)  메소드를 정의할 때 static 키워드를 사용한다. 정적 메소드는 클래스의 인스턴스가 아닌 클래스 이름으로 호출한다. 따라서 클래스의 인스턴스를 생성하지 않아도 호출할 수 있다.
+클래스 상속(Class Inheritance)은 코드 재사용 관점에서 매우 유용하다. 새롭게 정의할 클래스가 기존에 있는 클래스와 매우 유사하면, 상속을 통해 그대로 사용하되 다른점만 구현하면 된다. 코드 재사용은 개발 비용을 현저히 줄일 수 있는 잠재력이 있으므로 매우 중요하다.  
+  
+### 8.1 extends 키워드
+**extends** 키워드는 부모클래스(base class)를 상속받는 자식클래스(sub class)를 정의할 때 사용한다. 부모클래스 Circle을 상속받는 자식 클래스 Cylinder를 정의해 보자.
 ~~~javascript
-class Foo {
-    constructor(prop) {
-        this.prop = prop;
+// 부모클래스
+class Circle {
+    constructor(radius) {
+        this.radius = radius; // 반지름
     }
 
-    static staticMethod() {
-        /*
-        정적 메소드는 this를 사용할 수 없다.
-        정적 메소드는 내부에서 this가 클래스의 인스턴스가 아닌 클래스 자신을 가리킨다.
-        */
-        return 'staticMethod';
+    // 원의 지름
+    getDiameter() {
+        return 2 * this.radius;
     }
 
-    prototypeMethod() {
-        return this.prop;
+    // 원의 둘레
+    getPerimeter() {
+        return 2 * Math.PI * this.radius;
+    }
+
+    // 원의 넓이
+    getArea() {
+        return Math.Pi * Math.pow(this.radius, 2);
     }
 }
 
-// 정적 메소드는 클래스 이름으로 호출한다.
-console.log(Foo.staticMethod());
-
-const foo = new Foo(123);
-// 정적 메소드는 인스턴스로 호출할 수 없다.
-const log(foo.staticMethod()); // Uncaught TypeError: foo.staticMethod is not a function
-~~~
-클래스의 정적 메소드는 인스턴스로 호출할 수 없다. 이것은 정적 메소드는 this를 사용할 수 없다는 것을 의미한다. 일반 메소드 내부에서 this는 클래스의 인스턴스를 가리키며, 메소드 내부에서 this를 사용한다는 것은 클래스의 인스턴스의 생성을 전제로 하는것이다.  
-  
-정적 메소드는 클래스 이름으로 호출하기 때문에 클래스의 인스턴스를 생성하지 않아도 사용할 수 있다. 단, 정적 메소드는 this를 사용할 수 없다. 달리 말하면 메소드 내부에서 this를 사용할 필요가 없는 메소드는 정적 메소드로 만들 수 있다. 정적 메소드는 Math 객체의 메소드처럼 애플리케이션 전역에서 사용할 유틸리티(utility) 함수를 생성할 때 주로 사용한다.  
-  
-정적 메소드는 클래스의 인스턴스 생성없이 클래스의 이름으로 호출하며 클래스의 인스턴스로 호출할 수 없다고 하였다. 그 이유에 대해 좀 더 자세히 알아보면,  
-위에서도 언급했지만 사실 **클래스도 함수**이고 기존 prototype 기반 패턴의 Syntactic sugar일 뿐이다.
-~~~javascript
-class Foo {}
-
-console.log(typeof Foo); // function
-~~~
-위 예제를 ES5로 표현해보면 아래와 같다. ES5로 표현한 아래의 코드는 ES6의 클래스로 표현한 코드와 정확히 동일하게 작동한다.
-~~~javascript
-var Foo = (function () {
-    // 생성자 함수
-    function Foo(prop) {
-        this.prop = prop;
+// 자식클래스
+class Cylinder extends Circle {
+    constructor(radius, height) {
+        super(radius);
+        this.height = height;
     }
 
-    Foo.staticMethod = function () {
-        return 'staticMethod';
-    };
+    // 원통의 넓이: 부모 클래스의 getArea 메소드를 오버라이딩 하였다.
+    getArea() {
+        // (원통의 높이 * 원의둘레) + (2 * 원의 넓이)
+        return (this.height * super.getPerimeter()) + (2 * super.getArea());
+    }
 
-    Foo.prototytpe.prototypeMethod = function () {
-        return this.prop;
-    };
+    // 원통의 부피
+    getVolume() {
+        return super.getArea() * this.height;
+    }
+}
 
-    return Foo;
-}());
+// 반지름이 2, 높이가 10인 원통
+const cylinder = new Cyliner(2, 10);
 
-console.log(Foo.staticMethod());
+// 원의 지름
+console.log(cylinder.getDiameter()); // 4
 
-var foo = new Foo(123);
-console.log(foo.staticMethod()); // Uncaught TypeError: foo.staticMEthod is not defined
+// 원의 둘레
+console.log(cylinder.getPerimeter()); // 12.566370614359172
+
+// 원통의 넓이
+console.log(cylinder.getArea()); // 150.79644737231007
+
+// 원통의 부피
+console.log(cylinder.getVolume()); // 125.66370614359172
+
+
+// cylinder는 Cylinder 클래스의 인스턴스이다.
+console.log(cylinder instanceof Cylinder); // true
+// cylinder는 Cicle 클래스의 인스턴스이다.
+console.log(cylinder instanceof Circle); //true
 ~~~
-함수 객체(자바스크립트의 함수는 객체이다. 객체로서의 함수를 강조하고자 함수 객체라 표현함.)는 prototype 프로퍼티를 갖는데 일반 객체의 [[Prototype]] 프로퍼티와는 다른 것이며 일반 객체는 prototype 프로퍼티를 가지지 않는다.  
+~~~
+오버라이딩(Overriding)
+상위 클래스가 가지고 있는 메소드를 하위 클래스가 재정의하여 사용하는 방식이다.
+
+오버로딩(Overloading)
+매개변수의 타입 또는 갯수가 다른 같은 이름의 메소드를 구현하고 매개변수에 의해 메소드를 구별하여 호출하는 방식이다. 
+자바스크립트는 오버로딩을 지원하지 않지만 arguments 객체를 사용하여 구현할 수는 있다.
+~~~
+위 코드를 프로토타입 관점으로 표현하면 아래와 같다. 인스턴스 cylinder는 프로토타입 체인에 의해 부모클래스 Circle의 메소드를 사용할 수 있다.  
   
-함수 객체만이 가지고 있는 **prototype 프로퍼티는 함수 객체가 생성자로 사용될 때, 이 함수를 통해 생성된 객체의 부모 역할을 하는 프로토타입 객체**를 가리킨다. 위 코드에서 Foo는 생성자 함수로 사용되므로 생성자 함수 Foo의 prototype 프로퍼티가 가리키는 프로토타입 객체는 생성자 함수 Foo를 통해 생성되는 인스턴스 foo의 부모 역할을 한다.
+![inherite](./es6-inherite.png)
+  
+프로토타입 체인은 특정 객체의 프로퍼티나 메소드에 접근하려고 할 때 프로퍼티 또는 메소드가 없다면 [[Prototype]] 프로퍼티가 가르키는 링크를 따라 자신의 부모 역할을 하는 프로토타입 객체의 프로퍼티나 메소드를 차례대로 검색한다. 그리고 검색에 성공하면 그 프로퍼티나 메소드를 사용한다.  
+
+<br>
+
+### 8.2 super 키워드  
+  
+**super 키워드는 부모 클래스를 참조(Reference)할 때 또는 부모클래스의 constructor를 호출할 때 사용한다.**  
+위 "extends 키워드"의 예제를 보면 super가 메소드로 사용될 때, 그리고 객체로 사용될 때 다르게 동작하는 것을 알 수 있다. 다시 한번 예제를 보면
 ~~~javascript
-console.log(Foo.prototype === foo.__proto__); // true
+// 부모클래스
+class Circle {
+...
+}
+
+// 자식클래스
+class Cylinder extends Circle {
+    constructor(radius, height) {
+        // ① super 메소드는 부모 클래스의 인스턴스를 생성
+        super(radius);
+        this.height = height;
+    }
+
+    // 원통의 넓이: 부모 클래스의 getArea 메소드를 오버라이딩 하였다.
+    getArea() {
+        // (원통의 높이 * 원의둘레) + (2 * 원의 넓이)
+        // ② super 메소드는 부모 클래스(Base Class)에 대한 참조
+        return (this.height * super.getPerimeter()) + (2 * super.getArea());
+    }
+
+    // 원통의 부피
+    getVolume() {
+        // ② super 메소드는 부모 클래스(Base Class)에 대한 참조
+        return super.getArea() * this.height;
+    }
+}
+
+// 반지름이 2, 높이가 10인 원통
+const cylinder = new Cyliner(2, 10);
 ~~~
-그리고 생성자 함수 Foo의 prototype 프로퍼티가 가리키는 프로토타입 객체가 가지고 있는 constructor 프로퍼티는 생성자 함수 Foo를 가리킨다.
+①super 메소드는 자식 class의 constructor 내부에서 부모 클래스의 constructor(super-constructor)를 호출한다. 즉, 부모클래스의 인스턴스를 생성한다. **자식 클래스의 constructor에서 super()를 호출하지 않으면 this에 대한 참조에러(ReferenceError)가 발생한다.**
 ~~~javascript
-console.log(Foo.prototype.constructor === Foo); // true
+class Parent {}
+
+class Child extends Parent {
+    constructor() {} // ReferenceError: this is not defined
+}
+
+const child = new Child();
 ~~~
-**정적메소드인 staticMethod는 생성자 함수 Foo의 메소드(함수는 객체이므로 메소드를 가질 수 있다.)이고, 일반 메소드인 prototypeMethod는 프로토타입객체 Foo.prototype의 메소드이다. 따라서 staticMethod는 foo에서 호출할 수 없다.**  
+**이것은 super 메소드를 호출하기 이전에는 this를 참조할 수 없음을 의미한다.**  
   
-지금까지의 내용을 프로토타입 체인 관점에서 표현하면 아래와 같다.  
+②super키워드는 부모클래스(Base Class)에 대한 참조이다. 부모 클래스의 프로퍼티 또는 메소드를 참조하기 위해 사용한다.  
+
+<br>
+
+### 8.3 static 메소드와 prototype 메소드의 상속  
   
-![static](./es6-static.png)  
+프로토타입 관점에서 바라보면 자식 클래스의 [[prototype]] 프로퍼티가 가리키는 프로토타입 객체는 부모 클래스이다.
+~~~javascript
+class Parent {}
+
+class Child extends Parent {}
+
+console.log(Child.__proto__ === Parent); // true
+console.log(Child.prototype.__proto__ === Parent.prototype); // true
+~~~
+자식 클래스 Child의 프로토타입 객체는 부모 클래스 Parent이다. 그림으로 표현해보면 아래와 같다.  
   
+![chain](./es6-chain.png)
   
+이것은 Prototype chain에 의해 부모 클래스의 정적 메소드도 상속됨을 의미한다.
+~~~javascript
+class Parent {
+    static staticMethod() {
+        return 'staticMethod'
+    }
+}
+
+class Child extends Parent {}
+
+console.log(Parent.staticMethod()); // 'staticMethod'
+console.log(Child.staticMethod()); // 'staticMethod'
+~~~
+자식 클래스의 정적 메소드 내부에서도 super 키워드를 사용하여 부모클래스의 정적 메소드를 호출할 수 있다. 이는 자식 클래스는 프로토타입 체인에 의해 부모 클래스의 정적 메소드를 참조할 수 있기 때문이다.  
+  
+하지만 자식 클래스의 일반 메소드(프로토타입 메소드) 내부에서는 super 키워드를 사용하여 부모클래스의 정적메소드를 호출할 수 없다. 이는 자식 클래스의 인스턴스는 프로토타입 체인에 의해 부모 클래스의 정적 메소드를 참조할 수 없기 때문이다.
+~~~javascript
+class Parent {
+    static staticMethod() {
+        return 'Hello';
+    }
+}
+
+class Child extends Parent {
+    static staticMethod() {
+        return `${super.staticMethod()} World`;
+    }
+
+    prototypeMethod() {
+        return `${super.staticMethod()} world`;
+    }
+}
+
+console.log(Parent.staticMethod()); // 'Hello'
+console.log(Child.staticMethod());  // 'Hello wolrd'
+console.log(new Child().prototypeMethod()); 
+// TypeError: (intermediate value).staticMethod is not a function
+~~~
+![prototype-c](./es6-prototype-c.png)
+
+<br>
+<br>
 
 ## Reference
 * [ECMAScript 6](http://www.ecma-international.org/ecma-262/6.0/ECMA-262.pdf)
