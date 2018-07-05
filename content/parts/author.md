@@ -2,4 +2,6 @@
 title: author
 ---
 
-**Mr. Gatsby** Proin ornare ligula eu tellus tempus elementum. Aenean [bibendum](/) iaculis mi, nec blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus. :hearts:
+**BYSEOP** 안녕하세요. BYSEOP입니다.  
+제 글을 읽어주셔서 감사합니다. 도움이 되셨다면 위쪽에 SHARE를 이용해주세요!  
+궁금한점은 댓글로 남겨주세요. 감사합니다!

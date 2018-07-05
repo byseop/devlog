@@ -2,4 +2,6 @@
 title: info
 ---
 
-I am a front-end web developer. I used to be a web designer also, but now I concentrate on the code.
+<br>
+프론트엔드 개발자 배영섭입니다.  
+방문해주셔서 감사합니다!

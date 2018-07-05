@@ -4,16 +4,16 @@ module.exports = {
   siteTitle: "PersonalBlog - a blog starter for GatsbyJS", // <title>
   shortSiteTitle: "PersonalBlog GatsbyJS Starter", // <title> ending for posts and pages
   siteDescription: "PersonalBlog is a GatsbyJS starter.",
-  siteUrl: "https://gatsby-starter-personal-blog.greglobinski.com",
+  siteUrl: "https://byseop.netlify.com/",
   pathPrefix: "",
   siteImage: "preview.jpg",
-  siteLanguage: "en",
+  siteLanguage: "kr",
   // author
-  authorName: "greg lobinski",
-  authorTwitterAccount: "greglobinski",
+  authorName: "byseop",
+  authorTwitterAccount: "",
   // info
-  infoTitle: "greg lobinski",
-  infoTitleNote: "personal blog",
+  infoTitle: "byseop",
+  infoTitleNote: "personal & develop blog",
   // manifest.json
   manifestName: "PersonalBlog - a blog starter for GatsbyJS",
   manifestShortName: "PersonalBlog", // max 12 characters
@@ -22,11 +22,11 @@ module.exports = {
   manifestThemeColor: colors.background,
   manifestDisplay: "standalone",
   // contact
-  contactEmail: "john@doe.com",
+  contactEmail: "byseop@gmail.com",
   // social
   authorSocialLinks: [
-    { name: "github", url: "https://github.com/greglobinski" },
-    { name: "twitter", url: "https://twitter.com/greglobinski" },
-    { name: "facebook", url: "http://facebook.com/greglobinski" }
+    { name: "github", url: "https://github.com/byseop" },
+    // { name: "twitter", url: "https://twitter.com/greglobinski" },
+    { name: "facebook", url: "http://facebook.com/profile.php?id=100003672276708" }
   ]
 };
