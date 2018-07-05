@@ -39,7 +39,3 @@ title: About
 * Custom webpack `CommonsChunkPlugin` settings
 * Webpack `BundleAnalyzerPlugin`
 * Contact **form validation** (react-material-ui-form-validator)
-
-## Instructions
-
-For detailed instructions go to [Front-end web development with Greg](https://dev.greglobinski.com/gatsby-starter-personal-blog/).
