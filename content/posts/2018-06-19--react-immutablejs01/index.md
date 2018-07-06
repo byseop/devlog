@@ -1,7 +1,7 @@
 ---
 title: React - 리액트의 불변성과 Immutable.js 사용하기 -1-
 subTitle: 리액트의 불변성이란?
-cover: react.png
+cover: immutable.png
 category: "React"
 ---
 

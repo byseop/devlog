@@ -1,12 +1,14 @@
 ---
 title: React - 리액트 예제 To Do List 실습편 -1-
-subTitle: Todo List 리뷰 1편입니다
+subTitle: Todo List 리뷰 1편 - 컴포넌트 구성하기
 cover: react.png
 category: "React"
 ---
 리액트(React JS)로 만든 두번째 프로젝트 To Do List 만들기 를 해보았다!  
 어떤 방식으로 어떻게 만들어졌는지 차근차근 살펴보는 리뷰  
   
+  
+이 리뷰는 내용이 길어 1 ~ 5 편으로 나눠져 있습니다.    
   
 
 
