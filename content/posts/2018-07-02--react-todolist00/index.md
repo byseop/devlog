@@ -1,6 +1,6 @@
 ---
 title: React - 리액트 예제 To Do List 만들기 프리뷰
-subTitle: Todo List 미리보기입니다.
+subTitle: Todo List 미리보기
 cover: react.png
 category: "React"
 ---

@@ -1,6 +1,6 @@
 ---
 title: React - 리액트 예제 To Do List 실습편 -1-
-subTitle: Todo List 리뷰 1편입니다
+subTitle: Todo List 리뷰 1편
 cover: react.png
 category: "React"
 ---
