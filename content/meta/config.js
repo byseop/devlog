@@ -4,7 +4,7 @@ module.exports = {
   siteTitle: "BYSEOP's devlog", // <title>
   shortSiteTitle: "BYSEOP's devlog", // <title> ending for posts and pages
   siteDescription: "BYSEOP's devlog",
-  siteUrl: "https://byseop.netlify.com/",
+  siteUrl: "https://byseop.netlify.com",
   pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "kr",
