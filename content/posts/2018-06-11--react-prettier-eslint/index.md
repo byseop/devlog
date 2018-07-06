@@ -15,7 +15,8 @@ category: "React"
 물론 에디터마다 코드 정리 도구가 있지만 Prettier 의 차별점은 커스터마이징이 매우 자유롭고 추가적으로 ESLint 와 아예 연동이 가능하다는 점이다.
 
 <br>
-<br>
+<br>  
+
 ## 프로젝트 설정 및 ESLint 기본설정  
 
 진행 하기전에 우선 create-react-app 으로 프로젝트를 생성한다.
@@ -25,6 +26,7 @@ create-react-app prettier-react
 ```
 
 <br>
+
 create-react-app 에는 기본ESLint가 설정이 되어있긴 하지만 기본설정으로는 VSCode에서 바로 경고 및 에러를 확인 할 수없다. 그 대신 yarn start 를 했을 때 터미널에서는 확인할 수 있다. 이제 그리고나서 VSCode 로 해당 디렉토리를 열어준다.  
 
 에디터상에서도 오류를 제대로 보려면 VSCode 익스텐션 마켓플레이스에서 ESLint 를 설치하고 프로젝트 디렉토리에 <code>.eslintrc</code> 라는 파일을 만들고 다음과 같이 입력한다.
@@ -58,6 +60,7 @@ yarn add --dev prettier-eslint
 ```
 
 <br>
+
 그리고 나서 Ctrl + , 키를 눌러서 환경설정을 열고 다음과 같이 설정한다
 ~~~text
 //prettier-eslint 연동
@@ -65,10 +68,13 @@ yarn add --dev prettier-eslint
 "javascript.format.enable": false,
 "prettier.eslintIntegration": true,
 ~~~
+
 <br>
+
 코드가 저장될때마다 자동으로 포맷되고, prettier 에서 ESLint와 연동되도록 설정했다.
 
 <br>
+
 ## ESLint 세부설정  
 
 ESLint 에서 간단한 세부설정을 해보자. " 대신에 ' 를 사용하도록 설정하고 들여쓰기 공백 갯수를 설정한다. 아까 저장했던 .eslintrc 파일을 열어준다.
@@ -84,12 +90,15 @@ ESLint 에서 간단한 세부설정을 해보자. " 대신에 ' 를 사용하�
 ```
 
 <br>
+
 저장한 뒤 코드를 다시 저장하면 또 다시 코드가 자동으로 정리된다.  
 더 나아가서 인기있는 코드 스타일인 airbnb 스타일을 적용 해보자.  
 ~~~text
 yarn add eslint-config-airbnb
 ~~~
+
 <br>
+
 설치 후 .eslintrc 를 다음과 같이 작성한다.
 ~~~text
 {
@@ -101,7 +110,9 @@ yarn add eslint-config-airbnb
   }
 }
 ~~~
+
 <br>
+
 airbnb 코드 스타일에 적용되는 것들은 다음과 같다.
 1. state나 LifeCycle API 를 사용하지 않는다면 함수형 컴포넌트를 사용할 것
 2. LifeCycle API 는 특정 순서로 작성할 것
