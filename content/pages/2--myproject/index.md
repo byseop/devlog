@@ -3,7 +3,8 @@ title: My Project
 menuTitle: My Project
 ---
 
-### [Personal **Blog1**](https://byseop.github.io/)
+### [Personal **Blog1**](https://byseop.github.io/)  
+
 ### [Personal **Blog2**](https://byseop.netlify.com/)
 
 ### [PizzaHut](https://www.pizzahut.co.kr)
