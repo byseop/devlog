@@ -8,7 +8,7 @@ category: "React"
   
 
 이 리뷰는 내용이 길어 1 ~ 3편으로 나눠져 있습니다.  
-[1편을 보시려면 이곳](https://byseop.netlify.com/react-immutablejs01/)으로 이동해주세요!
+[1편을 보시려면 이곳](../react-immutablejs01/)으로 이동해주세요!
   
   
 
@@ -143,7 +143,7 @@ const {
   handleKeyPress
 } = this;
 ```
-이렇게 비구조화 할당을 하였다. [비구조화 할당을 잘 모른다면 이쪽](https://byseop.netlify.com/es6-6-destructuring/)에서 확인할 수 있다. 이 비구조화 할당을 함으로써 this.handleChange, this.handleCreate, this.handleKeyPress 이런식으로 계속 this를 붙여주는 작업을 생략할 수 있다.  
+이렇게 비구조화 할당을 하였다. [비구조화 할당을 잘 모른다면 이쪽](../es6-6-destructuring/)에서 확인할 수 있다. 이 비구조화 할당을 함으로써 this.handleChange, this.handleCreate, this.handleKeyPress 이런식으로 계속 this를 붙여주는 작업을 생략할 수 있다.  
   
 코드를 다 작성했다면 인풋에 값을 입력하고 Enter를 누르거나 버튼을 눌러보자. 제대로 작성됬다면 등록이 될 때 인풋 값이 비워질 것이다.  
   
@@ -155,7 +155,7 @@ todos 안에 있는 객체들을 화면에 보여주기 위해서는 todos 배�
 const number = [1, 2, 3, 4, 5];
 const squared = number.map(number => number * number);
 ```
-map의 예제이다 여기서는 [화살표 함수 (Arrow Function)](https://byseop.netlify.com/es6-3-arrow-function/)이 사용되었다 앞으로 리액트에서 많이 사용하게 될 것이니 알아두는게 좋다.  
+map의 예제이다 여기서는 [화살표 함수 (Arrow Function)](../es6-3-arrow-function/)이 사용되었다 앞으로 리액트에서 많이 사용하게 될 것이니 알아두는게 좋다.  
   
 우선, TodoItemList에 todos를 전달하자.
 
@@ -236,7 +236,7 @@ const todoList = todos.map(
 );
 ```
 이렇게 <code>{...todo}</code> 라고 넣어주면 내부의 값들이 모두 자동으로 props로 설정된다.  
-<code>{...todo}</code> 이 문법은 [Spread 연산자](https://byseop.netlify.com/es6-4-extended-parameter-handling/) 라고한다.  
+<code>{...todo}</code> 이 문법은 [Spread 연산자](../es6-4-extended-parameter-handling/) 라고한다.  
   
 이제 페이지를 보고 우리가 추가한 todo들이 잘 보여지나 확인해보자.  
 ![todolist04](./react_todolist04.png)  

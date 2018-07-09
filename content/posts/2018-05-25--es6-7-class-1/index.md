@@ -6,7 +6,7 @@ category: "Javascript"
 ---
 
 이 포스팅은 내용이 많아 1, 2편으로 나뉘어 져 있습니다.  
-후편을 보시려면 [이 곳](https://byseop.netlify.com/es6-7-class-2/)으로 이동하세요!
+후편을 보시려면 [이 곳](../es6-7-class-2/)으로 이동하세요!
 
 
 
