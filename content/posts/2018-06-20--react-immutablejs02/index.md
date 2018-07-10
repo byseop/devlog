@@ -259,3 +259,7 @@ export default User;
 
 User 컴포넌트에서는 username을 보여주기 위해 <code>const username = this.props.user.get('username')</code> 을 해도 좋다. 하지만 위의 방식으로 toJS()를 한 결과를 비구조화 할당하는 방법도 있다  
 여기까지 하면 Immutable을 사용하여 상태관리 하는것이 완성된다.  
+  
+
+## Reference  
+[React 기초 입문 프로젝트 – 흔하디 흔한 할 일 목록 만들기](https://velopert.com/3480) - written by VELOPERT

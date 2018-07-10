@@ -332,4 +332,7 @@ this.setState({
   
 **이러한 작업을 쉽게 해줄 수 있는 것이 Immutable.js 이다**  
   
-다음 포스트에서는 Immutable.js의 사용법에 대해 알아본다.
+다음 포스트에서는 Immutable.js의 사용법에 대해 알아본다.  
+  
+## Reference  
+[React ❤️ Immutable.js – 리액트의 불변함, 그리고 컴포넌트에서 Immutable.js 사용하기](https://velopert.com/3468) - written by VELOPERT

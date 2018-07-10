@@ -121,3 +121,7 @@ airbnb 코드 스타일에 적용되는 것들은 다음과 같다.
 5. 기타 등등...  
 
 여기서 끄고 싶은 기능은 rules 에서 0 으로 설정해주면 된다. 규칙이 꽤나 까다롭지만 적응하면 코드스타일이 깔끔하다는것을 느낄수 있게 될것이다. 자 이제 airbnb의 코딩스타일과 자동정리를 만끽해보자!
+  
+
+## Reference  
+[create-react-app 에 ESLint 와 Prettier 적용하기](https://velopert.com/3671) - written by VELOPERT

@@ -421,4 +421,8 @@ export default TodoItemList;
   
 
 
-다음 포스팅에서는 리액트로 상태관리를 해보자.
+다음 포스팅에서는 리액트로 상태관리를 해보자.  
+  
+
+## Reference  
+[React 기초 입문 프로젝트 – 흔하디 흔한 할 일 목록 만들기](https://velopert.com/3480) - written by VELOPERT
