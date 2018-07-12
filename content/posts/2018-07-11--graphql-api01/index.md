@@ -4,6 +4,8 @@ subTitle: Hello and Introduction
 cover: graphql.png
 category: "GraphQL"
 ---
+  
+이 포스팅은 [노마드 코더](https://academy.nomadcoders.co/)의 GraphQL 강의 리뷰입니다. 자세한 정보를 보고싶으시면 노마드코더에서 강의를 확인해보세요!  
 
   
   
