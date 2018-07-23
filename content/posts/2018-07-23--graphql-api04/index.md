@@ -117,7 +117,9 @@ schema와 resovers.js 는 우리가 API를 호출할때 명령어를 **선택사
 이제 다시 Playground에서 테스트를 해보자.  
 ![pg2](pg2.png)
 ![pg3](pg3.png)
-이렇게 우리가 정의한 조건에 맞게 API가 호출된다!
+이렇게 우리가 정의한 조건에 맞게 API가 호출된다!  
+  
+이제 다음 시리즈에서 우리가 만든 GraphQL API와 React, Apollo를 이용해 영화 웹을 만들어보자.
 
 
 ## Reference
