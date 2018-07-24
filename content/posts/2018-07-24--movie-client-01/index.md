@@ -1,6 +1,6 @@
 ---
 title: React & Apollo & GraphQL로 영화 웹앱 만들기 - 1
-subTitle: Wrapping a REST API width GraphQL
+subTitle: Getting data from the GraphQL API
 cover: rga.jpg
 category: "React"
 ---
