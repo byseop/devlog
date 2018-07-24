@@ -1,6 +1,6 @@
 ---
 title: GraphQL 그리고 NodeJS로 영화 API 만들기 - 4
-subTitle: Wrapping a REST API width GraphQL
+subTitle: Wrapping a REST API widh GraphQL
 cover: graphql.png
 category: "GraphQL"
 ---
