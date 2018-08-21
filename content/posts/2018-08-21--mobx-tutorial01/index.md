@@ -1,5 +1,5 @@
 ---
-title: MobX 와 React 첫번째 튜토리얼
+title: MobX 와 React 예제 - 첫번째 튜토리얼
 subTitle: Our first MobX + React Application
 cover: mobx.jpg
 category: "React"
@@ -260,7 +260,7 @@ ReactDOM.render(<App store={store} />, document.getElementById('root'));
 리스트를 눌러서 위쪽에 Selection 컴포넌트가 렌더링되는지 확인해보세요!  
 Close Profile 버튼을 눌렀을때 Selection 컴포넌트가 사라지나요?  
 
-**MobX**를 이용한 튜토리얼 예제를 여기서 마치겠습니다. 제 튜토리얼 후기의 설명이 완벽하지 않을 수도, 틀릴 수도 있습니다. 하지만 **MobX**가 그렇게 복잡하지 않다는 것이 전달되었으면 좋겠습니다. 그리고 **React**와 **MobX**를 함께 사용하는것 또한 엄청나게 대단한 것이 아닙니다. 나머지 **MobX**를 통한 확장전략, Best Practice 등 여전히 다뤄질 주제가 많습니다. 그 중 대부분은 저보다 경험이 많으신 분들에게 맡겨야 할 것 같습니다.  
+**MobX**를 이용한 튜토리얼 예제를 여기서 마치겠습니다. 제 튜토리얼 후기의 설명이 완벽하지 않을 수도, 틀릴 수도 있습니다. 하지만 **MobX**가 그렇게 복잡하지 않다는 것이 전달되었으면 좋겠습니다. 그리고 **React**와 **MobX**를 함께 사용하는것 또한 엄청나게 대단한 것이 아닙니다. 나머지 **MobX**를 통한 확장전략, Best Practice 등 여전히 다뤄질 주제가 많습니다. 
 
 이 글을 흥미롭게 보셨다면 [MobX](https://mobx.js.org/) 공식 홈페이지를 참고해보세요.    
 
