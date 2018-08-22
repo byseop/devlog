@@ -21,14 +21,13 @@ title: About
 * **Social** sharing (Twitter, Facebook, Google, LinkedIn)
 * **Comments** (Facebook)
 * **Images** lazy loading and `webp` support (gatsby-image)
-* Post **categories** (post list filtering)
-* Full text **searching** (Algolia)
+* Post **categories** (post list filtering)  
 * **Contact** form (Netlify form handling)
 * **RSS** feed
 * **PWA** (manifes.json, offline support, favicons)
 * Google **Analytics**
 * **Favicons** generator (node script)
-* **Material UI** (@next)
+* **Material UI** (@next)  
 
 ### Advanced features:
 
