@@ -10,7 +10,7 @@ title: About
 이 블로그는 저의 2번째 블로그이고 첫번째 블로그는 [byseop's devlog](https://byseop.github.io) 입니다.  
   
 현재 저는 [M-sync](http://www.m-sync.co.kr/main/index.msc) 에서 **프론트엔드**로 일하고 있습니다.  
-제가 맡고 있는 프로젝트는 [이 곳](https://byseop.netlify.com/myproject/)에서 확인 가능합니다.  
+제가 맡고 있는 프로젝트는 [이 곳](/myproject)에서 확인 가능합니다.  
   
 홈페이지의 자세한 사양은 아래와 같습니다.
 
