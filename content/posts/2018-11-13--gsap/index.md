@@ -117,7 +117,7 @@ TimelineLite는 하나의 오브젝트를 애니메이션 하는것으로 제한
   border-radius: 100%;
 }
 ```
-```javscript
+```javascript
 var tl = new TimelineLite;
 
 tl.to("#myDiv", 2, {
@@ -136,7 +136,7 @@ tl.to("#myDiv", 2, {
   opacity: 0,
 });
 ```
-[3](3.gif)
+![3](3.gif)  
 이번에는 원형의 오브젝트를 추가하고, <code>.from</code>메소드를 이용하여 여러개의 오브젝트를 애니메이션 시켜보았습니다. <code>.from</code>메소드는 시작값을 의미합니다. <code>opacity</code>를 0으로 지정하면 시작할 때 0% 투명도에서 끝날땐 100% 투명도로 애니메이션 됩니다.  
   
 최종 [codepen](https://codepen.io/anon/pen/jQybEm)입니다. 동시에 실행하기 등 더 자세한 TimelineLite를 알고싶다면 [이 곳](https://greensock.com/docs/TimelineLite)을 읽어보세요! 다음 포스팅에서는 자세한 easing과 draw svg를 알아보겠습니다.
