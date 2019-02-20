@@ -11,8 +11,6 @@ menuTitle: My Project
 
 ### [SDG](http://www.urbansdgplatform.org/index.msc)
 
-### [INUS](http://www.inusmall.com/shop/main/index.php)
+### [ToyProject: Umm..movie - powered by React](https://byseop.github.io/movie-app-ver2/)
 
-### [Neferra](https://neferra.com)
-
-### [M-sync](http://m-sync.co.kr/main/index.msc)
+### [ToyProject: Co-info - powered by React](https://byseop.github.io/Co-Info/)
