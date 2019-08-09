@@ -14,3 +14,5 @@ menuTitle: My Project
 ### [ToyProject: Umm..movie - powered by React](https://byseop.github.io/movie-app-ver2/)
 
 ### [ToyProject: Co-info - powered by React](https://byseop.github.io/Co-Info/)
+### [IQOS locator](iqossvc.kr)  
+### [365MC global](http://eng.365mc.co.kr)
