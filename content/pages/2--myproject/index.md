@@ -4,7 +4,7 @@ menuTitle: My Project
 ---
 ## 현재 진행중인 프로젝트  
 * [Personal **Blog2**](https://byseop.netlify.com/)
-* [IQOS locator](iqossvc.kr)  
+* [IQOS locator](https://iqossvc.kr)  
 * [365MC global](http://eng.365mc.co.kr)
   
   
