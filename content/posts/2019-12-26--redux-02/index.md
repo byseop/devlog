@@ -108,6 +108,8 @@ export type Todo = {
   isToggle: boolean;
 };
 
+export type Todos = Todo[];
+
 // 기본값
 export const initialState: Todo[] = [
   {
