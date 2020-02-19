@@ -93,7 +93,7 @@ class Button extends Component<ButtonProps> {
 
   // ...
 }
-```
+```  
 3. 기본 불러오기와 혼합하여 사용하지 않는다.  
 ```typescript
 // Is only 'Foo' a type? Or every declaration in the import?
