@@ -80,8 +80,9 @@ export { Something } from './some-module.ts';
 1. <code>import type</code> 은 오직 [Type Annotation](https://www.tutorialsteacher.com/typescript/type-annotation) 혹은 타입선언에만 사용해야 합니다.  
 그 이유는 자바스크립트로 변환 될 때 <code>import type</code> 을 이용한 코드는 통째로 지워지게 됩니다.  
 2. <code>class</code> 의 <code>extends</code> 로 사용될 때는 사용하지 않습니다.  
+
 ```typescript
-import type { Component } from "react";
+import type { Component } from 'react';
 
 interface ButtonProps {
   // ...
@@ -94,15 +95,18 @@ class Button extends Component<ButtonProps> {
   // ...
 }
 ```  
+
 3. 기본 불러오기와 혼합하여 사용하지 않는다.  
+
 ```typescript
 // Is only 'Foo' a type? Or every declaration in the import?
 // We just give an error because it's not clear.
 
-import type Foo, { Bar, Baz } from "some-module";
+import type Foo, { Bar, Baz } from 'some-module';
 //     ~~~~~~~~~~~~~~~~~~~~~~
 // error! A type-only import can specify a default import or named bindings, but not both.
-```
+```  
+
 애매하게 보일 수 있는 기본 불러오기와 혼합하여 <code>import type</code> 하는것은 허용하지 않습니다.  
   
 이 외에 추가적인 정보는 [Github pull request](https://github.com/microsoft/TypeScript/pull/35200)나 [베타버전 배포 이후 변경사항](https://github.com/microsoft/TypeScript/pull/36092/)에서 확인할 수 있습니다.  
@@ -123,14 +127,14 @@ export * as two from './one';
 ## Top-Level await  
 자바스크립트에서 HTTP요청과 같은 대부분의 Input과 Output은 비동기적이고, 많은 API가 <code>Promise</code>를 반환합니다.  
 ```javascript
-fetch("...")
+fetch('...')
   .then(response => response.text())
   .then(greeting => { console.log(greeting) });
 ```
 자바스크립트 사용자들은 <code>.then</code>으로 처리하는 것 대신에 <code>async function</code>과 <code>await</code>을 도입하였습니다.
 ```javascript
 async function main() {
-  const response = await fetch("...");
+  const response = await fetch('...');
   const greeting = await response.text();
   console.log(greeting);
 }
@@ -141,7 +145,7 @@ main()
 이제는 <code>async function</code> 를 사용하는 것 대신에 ECMAScript의 'Top-Level awiat' 라고 부르는 기능을 도입하였습니다.  
 이 전의 자바스크립트는 <code>async function</code> 안쪽에서 <code>await</code> 키워드를 사용할 수 있었습니다. 하지만 'Top-Level await'는 모듈의 Top-Level에서 <code>async</code> 없이 사용 할 수 있습니다.
 ```javascript
-const response = await fetch("...");
+const response = await fetch('...');
 const greeting = await response.text();
 console.log(greeting);
 
