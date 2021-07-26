@@ -8,6 +8,7 @@ menuTitle: My Project
 - [개인블로그](https://byseop.netlify.com/)
 - [Modern Movie Web](https://byseop.github.io/modern-movie-web/)
 - [Trading Simulator](https://byseop.github.io/trading-simulator/)
+- [15gg](https://15gg.netlify.app/)
 
 ## 과거 진행했던 프로젝트
 
