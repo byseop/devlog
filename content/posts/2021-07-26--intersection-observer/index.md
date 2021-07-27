@@ -397,7 +397,14 @@ export default function Example() {
 }
 ```
 
-이렇게 <code>handleIntersect</code>와 <code>config</code>를 받아서 코드를 재활용해주는 훅을 만들어 보았습니다.
+이렇게 <code>handleIntersect</code>와 <code>config</code>를 받아서 코드를 재활용해주는 훅을 만들어 보았습니다.  
+주석 (1)에서 처럼 타겟 엘리먼트 설정 부분만 따로 빼주어서 <code>ref</code> 에 넣어주었습니다.
+
+## 마치며
+
+이렇게 <code>Intersection Observer</code>를 이용하면 <code>ScrollEvent</code>에 비해 브라우저에 부하가 더 적게 최적화 할 수 있고 추가로 커스텀 훅 까지 만들어 보았습니다.
+
+하지만 <code>ScrollEvent</code>도 위에 설명한 스로틀을 잘 적용하면 좀 더 사용자에게 좋은 경험을 만들 수 있을것 같습니다.
 
 ## Reference
 
