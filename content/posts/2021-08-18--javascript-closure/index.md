@@ -5,7 +5,7 @@ cover: closure.png
 category: "Javascript"
 ---
 
-> You don't know JS 스코프와 클로저 -
+> You don't know JS 스코프와 클로저 -  
 > 클로저는 렉시컬 스코프에 의존하여 코드를 작성한 결과로 그냥 발생하는것이다.  
 > 모든 코드에서 클로저는 발생하고 사용되고 있다.
 
