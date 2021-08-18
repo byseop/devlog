@@ -12,7 +12,7 @@ category: "React"
 > Intersection Observer API 는 타겟 요소와 상위 요소 또는 최상위 document 의 viewport 사이의 intersection 내의 변화를 비동기적으로 관찰하는 방법입니다.
 
 MDN 에서 설명하는 <code>Intersection Observer</code>의 설명은 위와 같습니다.  
-그렇다면 엘리먼트 특정 Element 사이의 intersection 변화를 알 수 있는 다른 방법은 무엇이 있고 <code>Intersectino Observer</code>와 무엇이 다르고 어떻게 활용할 수 있을까요?
+그렇다면 엘리먼트 특정 Element 사이의 intersection 변화를 알 수 있는 다른 방법은 무엇이 있고 <code>Intersection Observer</code>와 무엇이 다르고 어떻게 활용할 수 있을까요?
 
 ## Intersection Observer vs ScrollEvent
 
